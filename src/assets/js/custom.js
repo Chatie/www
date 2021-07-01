@@ -213,7 +213,4 @@
         $("html, body").animate({ scrollTop: "0" },  500);
     });
 
-    // ToolTip
-    $('[data-toggle="tooltip"]').tooltip();
-
 }(jQuery));

@@ -415,7 +415,7 @@ Navbar Area CSS
             }
         }
         .container {
-            max-width: 1140px;
+            max-width: 1320px;
         }
     }
 }
@@ -757,6 +757,18 @@ Navbar Area CSS
         }
     }
 }
+.navbar-light {
+    .navbar-toggler {
+        color: $black-color;
+        border-radius: 0;
+        box-shadow: unset;
+        border-color: $black-color;
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+    }
+}
 // Mobile Navbar
 @media only screen and (max-width: 767px) {
 
@@ -779,8 +791,12 @@ Navbar Area CSS
         .navbar {
             .navbar-nav {
                 margin-left: 0;
+                max-height: 60vh;
                 padding: 12px 20px;
-
+                overflow: {
+                    y: scroll;
+                    x: hidden;
+                };
                 .nav-item {
                     padding: {
                         top: 10px;
@@ -805,11 +821,22 @@ Navbar Area CSS
                         opacity: 1;
                         visibility: visible;
                         margin-top: 15px !important;
-                        display: none;
+                        box-shadow: unset;
+                        display: block;
+                        border: none;
+                        background-color: #f9f9f9;
 
                         &.show {
                             display: block;
                             top: 0 !important;
+                        }
+                        li {
+                            .dropdown-menu {
+                                opacity: 1;
+                                visibility: visible;
+                                margin-top: 0 !important;
+                                background-color: $white-color;
+                            }
                         }
                     }
                 }
@@ -855,17 +882,6 @@ Navbar Area CSS
             #navbarSupportedContent {
                 margin-top: 15px;
                 border: 1px solid #eeeeee;
-            }
-        }
-    }
-    .navbar-light {
-        .navbar-toggler {
-            color: $black-color;
-            border-radius: 0;
-            border-color: $black-color;
-
-            .navbar-toggler-icon {
-                background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
             }
         }
     }
@@ -1029,6 +1045,7 @@ Partner Area CSS
 }
 .banner-image {
     height: 100vh;
+    position: relative;
     border-radius: 0 0 0 80px;
     background: {
         color: $optional-color;
@@ -1058,6 +1075,7 @@ Partner Area CSS
 .banner-img {
     height: 100%;
     width: 100%;
+    position: relative;
     border-radius: 0 0 0 80px;
     background: {
         color: $optional-color;
@@ -2381,7 +2399,7 @@ Feedback Area CSS
 .single-feedback-item {
     position: relative;
     margin: {
-        top: 95px;
+        top: 120px;
         bottom: 30px;
     };
     img {
@@ -2865,7 +2883,7 @@ FAQ Area CSS
 =================================================*/
 .faq-accordion {
     margin-left: auto;
-    max-width: 700px;
+    max-width: 775px;
 
     h2 {
         margin-bottom: 40px;
@@ -2888,6 +2906,8 @@ FAQ Area CSS
             display: block;
             background: #f5f5ff;
             margin-bottom: 10px;
+            border-radius: 0;
+            border: 0;
 
             &:last-child {
                 margin-bottom: 0;
