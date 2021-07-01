@@ -48,7 +48,7 @@ jobs:
         git checkout --orphan gh-pages
         git reset --hard
         git commit --allow-empty -m "Orphan init"
-        git checkout main
+        git checkout master
     - name: Bind git worktree with dist/spacle-ng folder and gh-pages branch
       run: |
         rm -fr gh-pages
