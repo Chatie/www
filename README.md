@@ -1,4 +1,4 @@
-# SpacleNg
+# SpacleNg [![GitHub Pages CI](https://github.com/Chatie/www/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/Chatie/www/actions/workflows/gh-pages.yml)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.8.
 
